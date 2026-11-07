@@ -51,17 +51,49 @@
   "email": "hello@pathwaysegypt.com",
   "telephone": "+201222288428",
   "taxID": "774-258-489",
-  "areaServed": { "@type": "Country", "name": "Egypt" },
-  "address": { "@type": "PostalAddress", "streetAddress": "1 Champollion Street, Downtown", "addressLocality": "Cairo", "addressCountry": "EG" },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Egypt"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1 Champollion Street, Downtown",
+    "addressLocality": "Cairo",
+    "addressCountry": "EG"
+  },
   "location": [
-    { "@type": "Place", "name": "Head office, Cairo", "address": { "@type": "PostalAddress", "streetAddress": "1 Champollion Street, Downtown", "addressLocality": "Cairo", "addressCountry": "EG" } },
-    { "@type": "Place", "name": "Upper Egypt office, Luxor", "address": { "@type": "PostalAddress", "streetAddress": "ETAA Building, 4th floor, Jolieville Street", "addressLocality": "Luxor", "addressCountry": "EG" } }
+    {
+      "@type": "Place",
+      "name": "Head office, Cairo",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Champollion Street, Downtown",
+        "addressLocality": "Cairo",
+        "addressCountry": "EG"
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Upper Egypt office, Luxor",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ETAA Building, 4th floor, Jolieville Street",
+        "addressLocality": "Luxor",
+        "addressCountry": "EG"
+      }
+    }
   ],
   "sameAs": [
     "https://www.instagram.com/pathwaysegypt",
     "https://www.facebook.com/Pathwaystourseg/",
     "https://www.linkedin.com/company/pathwaysegypt"
-  ]
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Mohamed Tawfik",
+    "jobTitle": "CEO and Founder",
+    "image": "https://pathwaysegypt.com/assets/founder-mohamed-tawfik.jpg"
+  }
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -401,6 +433,27 @@
   .map-card.in .ripple { animation: pw-ripple 4s ease-out 5.4s infinite; }
   @keyframes pw-ripple { 0% { opacity: .7; transform: scale(.2); } 100% { opacity: 0; transform: scale(9); } }
 
+
+  /* Founder */
+  .founder-grid { display: grid; gap: 40px; align-items: center; }
+  .founder-photo { position: relative; isolation: isolate; margin: 0 18px 30px 0; width: calc(100% - 18px); max-width: 340px; justify-self: center; }
+  .founder-photo::before { content: ""; position: absolute; inset: 0; transform: translate(18px, 18px); border: 2px solid var(--coral); border-radius: 34px; z-index: -1; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+  .founder-photo:hover::before { transform: translate(12px, 12px); }
+  .founder-mat { background: #fff; padding: 10px; border-radius: 34px; box-shadow: 0 40px 70px -40px rgba(94,18,41,.6); }
+  .founder-mat img { display: block; width: 100%; height: auto; border-radius: 24px; }
+  .founder-badge { position: absolute; left: 26px; bottom: -26px; width: 64px; height: 64px; border-radius: 50%; background: var(--cream); display: grid; place-items: center; box-shadow: 0 12px 26px -12px rgba(94,18,41,.55); border: 2px solid #fff; }
+  .founder-badge img { width: 34px; height: auto; }
+  .founder-quote { position: relative; margin: 22px 0 0; padding-top: 34px; }
+  .founder-quote::before { content: "\201C"; position: absolute; top: -18px; left: -4px; font-family: var(--head); font-weight: 700; font-size: 6rem; line-height: 1; color: var(--coral); }
+  .founder-quote p { font-family: var(--head); font-weight: 500; font-size: clamp(1.25rem, 2.6vw, 1.75rem); line-height: 1.45; letter-spacing: -0.01em; color: var(--charcoal); max-width: 36ch; }
+  .founder-sign { display: grid; gap: 4px; margin-top: 28px; padding-left: 18px; border-left: 3px solid var(--coral); }
+  .founder-sign strong { font-family: var(--head); font-weight: 600; font-size: 1.1875rem; color: var(--burgundy); }
+  .founder-sign span { color: var(--muted); font-size: .9375rem; }
+  @media (min-width: 960px) {
+    .founder-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; }
+    .founder-photo { justify-self: start; max-width: 430px; }
+  }
+
   /* Motion: everything stays visible without JavaScript, and all motion stops for visitors who prefer reduced motion */
   @keyframes pw-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
   @keyframes pw-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
@@ -607,6 +660,26 @@
           <div><span class="step-n">Step 4</span><h3>On the ground</h3><p>One point of contact through to the final transfer.</p></div>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section founder" aria-labelledby="founder-name">
+    <div class="wrap founder-grid">
+      <figure class="founder-photo reveal">
+        <div class="founder-mat"><img src="assets/founder-mohamed-tawfik.jpg" alt="Mohamed Tawfik, CEO and Founder of Pathways" width="900" height="1040" loading="lazy" decoding="async"></div>
+        <span class="founder-badge" aria-hidden="true"><img src="assets/pathways-icon.png" alt="" width="310" height="297"></span>
+      </figure>
+      <div class="founder-copy">
+        <span class="eyebrow reveal">The founder</span>
+        <blockquote class="founder-quote reveal" style="--d:.08s">
+          <p>I founded Pathways so our partners can get Egypt itineraries built around their own clients, not taken from a brochure. Every itinerary starts from your brief and is checked against how it will actually run on the ground, with one point of contact from first enquiry to final transfer.</p>
+        </blockquote>
+        <div class="founder-sign reveal" style="--d:.16s">
+          <strong id="founder-name">Mohamed Tawfik</strong>
+          <span>CEO and Founder, Pathways</span>
+          <span>Also COO and Managing Partner, El Tawfik Tours</span>
+        </div>
+      </div>
     </div>
   </section>
 
