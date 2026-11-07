@@ -239,7 +239,6 @@
   .hero-grid { display: grid; gap: 40px; align-items: center; }
   .hero-art { display: none; position: relative; width: 100%; max-width: 500px; justify-self: end; }
   .hero-art svg { display: block; width: 100%; height: auto; overflow: visible; }
-  .hero-art .rings { transform-origin: 260px 260px; animation: pw-spin 90s linear infinite; }
   .hero-art .route { stroke-dasharray: 1; stroke-dashoffset: 1; animation: pw-draw 2.6s cubic-bezier(.45,.05,.2,1) .7s forwards; }
   .hero-art .stop { opacity: 0; animation: pw-pop .6s cubic-bezier(.2,.7,.2,1.3) forwards; transform-box: fill-box; transform-origin: center; }
   .hero-art .pulse { transform-box: fill-box; transform-origin: center; opacity: 0; animation: pw-pulse 3.2s ease-out infinite; }
@@ -507,13 +506,6 @@
       </div>
       <div class="hero-art" aria-hidden="true">
         <svg viewBox="0 0 520 520" focusable="false">
-          <g class="rings" fill="none" stroke="#FAD8D2">
-            <circle cx="260" cy="260" r="248" stroke-opacity=".14" stroke-dasharray="2 10"/>
-            <circle cx="260" cy="260" r="196" stroke-opacity=".18"/>
-            <circle cx="260" cy="260" r="138" stroke-opacity=".16" stroke-dasharray="4 8"/>
-            <circle cx="260" cy="260" r="78" stroke-opacity=".14"/>
-            <path d="M260 4v18M260 498v18M4 260h18M498 260h18" stroke-opacity=".3" stroke-width="2"/>
-          </g>
           <path class="eg-outline" d="M32.0 72.0 L114.0 80.0 L178.0 96.0 L222.0 86.0 L242.0 77.2 L266.0 72.0 L300.0 73.2 L318.0 83.2 L350.0 90.0 L378.0 88.0 L394.8 81.2 L422.0 154.0 L412.8 172.0 L396.0 224.8 L370.8 204.4 L350.0 172.4 L330.0 136.0 L320.0 150.0 L332.0 170.0 L349.2 199.6 L378.8 244.0 L383.6 264.8 L421.6 331.2 L445.2 376.0 L450.8 414.0 L500.0 454.0 L282.0 454.0 L26.0 454.0 L25.2 134.0 Z" fill="#FAD8D2" fill-opacity=".05" stroke="#FAD8D2" stroke-opacity=".28" stroke-width="1.5" stroke-linejoin="round"/>
           <path d="M280.0 454.0 C 282.7 448.7, 288.7 432.0, 296.0 422.0 C 303.3 412.0, 316.3 402.6, 324.0 394.0 C 331.7 385.4, 338.7 376.9, 342.0 370.4 C 345.3 363.9, 344.2 361.1, 344.0 355.2 C 343.8 349.3, 343.5 340.3, 340.8 334.8 C 338.1 329.3, 329.5 327.1, 328.0 322.4 C 326.5 317.7, 330.5 312.2, 331.6 306.4 C 332.7 300.6, 337.4 290.0, 334.8 287.6 C 332.2 285.2, 322.9 294.7, 316.0 292.0 C 309.1 289.3, 300.7 279.1, 293.6 271.6 C 286.5 264.1, 279.5 257.1, 273.2 246.8 C 266.9 236.5, 256.5 222.6, 256.0 210.0 C 255.5 197.4, 266.7 184.1, 270.0 171.2 C 273.3 158.3, 275.5 143.3, 275.6 132.4 C 275.7 121.5, 272.3 114.4, 270.8 106.0 C 269.3 97.6, 267.6 90.3, 266.8 82.0 C 266.0 73.7, 266.1 60.3, 266.0 56.0" fill="none" stroke="#FAD8D2" stroke-opacity=".2" stroke-width="10" stroke-linecap="round"/>
           <path class="route" pathLength="1" d="M280.0 454.0 C 282.7 448.7, 288.7 432.0, 296.0 422.0 C 303.3 412.0, 316.3 402.6, 324.0 394.0 C 331.7 385.4, 338.7 376.9, 342.0 370.4 C 345.3 363.9, 344.2 361.1, 344.0 355.2 C 343.8 349.3, 343.5 340.3, 340.8 334.8 C 338.1 329.3, 329.5 327.1, 328.0 322.4 C 326.5 317.7, 330.5 312.2, 331.6 306.4 C 332.7 300.6, 337.4 290.0, 334.8 287.6 C 332.2 285.2, 322.9 294.7, 316.0 292.0 C 309.1 289.3, 300.7 279.1, 293.6 271.6 C 286.5 264.1, 279.5 257.1, 273.2 246.8 C 266.9 236.5, 256.5 222.6, 256.0 210.0 C 255.5 197.4, 266.7 184.1, 270.0 171.2 C 273.3 158.3, 275.5 143.3, 275.6 132.4 C 275.7 121.5, 272.3 114.4, 270.8 106.0 C 269.3 97.6, 267.6 90.3, 266.8 82.0 C 266.0 73.7, 266.1 60.3, 266.0 56.0" fill="none" stroke="#FF8A76" stroke-width="3.5" stroke-linecap="round"/>
